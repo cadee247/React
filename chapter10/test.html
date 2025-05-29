@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Test</title>
+    <!-- React and Babel CDN links -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        const { useState } = React;
+
+        // Counter Component
+        const Counter = ({ initialCount }) => {
+            const [count, setCount] = useState(initialCount);
+
+            return (
+                <div>
+                    <h3>Count: {count}</h3>
+                    <button onClick={() => setCount(count + 1)}>Increase</button>
+                </div>
+            );
+        };
+
+        // Message Component
+        const Message = ({ text }) => {
+            const [isVisible, setIsVisible] = useState(true);
+
+            return (
+                <div>
+                    <button onClick={() => setIsVisible(!isVisible)}>
+                        {isVisible ? "Hide Message" : "Show Message"}
+                    </button>
+                    {isVisible && <p>{text}</p>}
+                </div>
+            );
+        };
+
+        // Main App Component
+        const App = () => (
+            <div>
+                <Counter initialCount={0} />
+                <Message text="Hello, welcome to React!" />
+            </div>
+        );
+
+        ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+    </script>
+</body>
+</html>
