@@ -1,0 +1,58 @@
+/* StarWars.css */
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(ellipse at center, #000 0%, #0a0a0a 100%);
+    color: #ffe81f;
+    min-height: 100vh;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 2px solid #ffe81f;
+    background-color: #000;
+    color: #ffe81f;
+    border-radius: 4px;
+    width: 250px;
+}
+
+button {
+    background-color: #ffe81f;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+div.character {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #ffe81f44;
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 8px;
+    color: #fff;
+    box-shadow: 0 0 5px #ffe81f;
+}
