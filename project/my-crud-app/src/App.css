@@ -1,0 +1,113 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Layout Container */
+.app-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+/* Headings */
+h2 {
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Form Inputs */
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 8px 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Project Cards */
+.item-card {
+  background: #f9fafc;
+  border: 1px solid #e1e7ed;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-card strong {
+  font-size: 18px;
+  display: block;
+  color: #333;
+}
+
+.item-card small {
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app-container {
+    margin: 20px 16px;
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  input,
+  select {
+    font-size: 15px;
+  }
+}
